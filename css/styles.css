@@ -203,6 +203,59 @@ margin:4rem 0;
 NAVBAR
 =========================
 */
+.nav{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: var(--long-transition);
+}
+.nav-header{
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  border-bottom: 2px solid var(--clr-red);
+  transition: var(--long-transition);
+}
+.nav-logo{
+  width: 5rem;
+  align-self: baseline;
+}
+.nav-btn{
+  font-size: 2rem;
+  color: var(--clr-red);
+  display: inline-block;
+  padding: 0 1rem;
+  cursor: pointer;
+	border: 2px solid var(--clr-red);
+  border-radius: 50%;
+  background: transparent;
+}
+.nav-links{
+  display: none;
+  background: var(--clr-black);
+}
+.nav-link{
+  display: block;
+  color: var(--clr-red);
+  padding:1rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.nav-link:hover{
+  padding-left: 2rem;
+  border-left: 5px solid var(--clr-yellow);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--clr-yellow);
+}
+.navBackground{
+  background: rgba(0,0,0,0.9);
+}
+
+
 
 
 /*
@@ -212,7 +265,7 @@ HERO
 */
 
 .header{
-  background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/header-bcg.jpeg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.5)), url('../images/header-bcg.jpeg') center/cover no-repeat fixed;
   min-height: 100vh;
   position: relative;
 }
@@ -222,10 +275,12 @@ HERO
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
+  width: 80%;
 }
 .hero-subtitle{
   font-family: var(--ff-secondary);
   color: var(--clr-red);
+  margin-bottom: 2rem;
 }
 .hero-title{
   text-transform: uppercase;
@@ -233,13 +288,70 @@ HERO
   font-family: var(--ff-tertiary);
   font-size: 4rem;
 }
+.hero-btn{
+  border-radius: 0;
+  background: transparent;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+}
+.hero-btn:hover{
+  background: var(--clr-black);
+}
+@media screen and (max-width:520px){
+  .hero-subtitle{
+    margin-bottom:1.5rem
+  }
+  .hero-title{
+    font-size: 2.8rem;
+  }
+  .hero-btn{
+    margin-top:0.8rem;
+    font-size: 1rem;
+  }
+}
+
+
 
 
 /*
 =========================
-SKILLS
+ICONS
 =========================
 */
+.icons{
+  background: var(--clr-black);
+  padding: 5rem 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+}
+.icons-title{
+  margin-bottom: 2.5rem;
+  color: var(--clr-yellow);
+}
+.social-icon{
+  font-size: 3rem;
+  padding:2rem 1rem;
+}
+.social-icon .fa-twitter{
+  color: #50ABF1;
+}
+.social-icon .fa-instagram{
+  color:#F24D6F;
+}
+.social-icon .fa-linkedin{
+  color:#0077B7;
+}
+.social-icon .fab{
+  transition: var(--transition);
+}
+.social-icon:hover .fab{
+  color: var(--clr-yellow);
+}
+
+
 
 
 /*
