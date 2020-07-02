@@ -1,15 +1,13 @@
 $(document).ready(function () {
 
 
-
-
   var mq = window.matchMedia("(max-width: 992px)");
   if (mq.matches) {
 
     $('.nav-btn').click(function () {
 
       // displaying links on click
-      $('.nav-links').slideToggle(1000);
+      $('.nav-links').slideToggle(800);
 
       // changing nav button
       $('.nav-btn').toggleClass('turn');
@@ -27,11 +25,9 @@ $(document).ready(function () {
   }
 
 
-
-
+  // transparent background
   $(window).scroll(function () {
 
-    // transparent background
     let position = $(window).scrollTop();
     if (position >= 100) {
       $('nav, nav-header').addClass('navBackground')
@@ -42,6 +38,7 @@ $(document).ready(function () {
 
   })
 
+
   // smooth scroll
   $('.nav-link,.hero-btn').click(function (link) {
     link.preventDefault();
@@ -49,9 +46,15 @@ $(document).ready(function () {
     let target = $(this).attr('href');
     $('html, body').stop().animate({
       scrollTop: $(target).offset().top - 82
-    }, 1500);
+    }, 1000);
 
   })
+
+
+  // accordion
+  $(".about-text").accordion({
+    collapsible: true
+  });
 
 
 })
