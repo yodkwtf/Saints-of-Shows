@@ -240,7 +240,7 @@ NAVBAR
   display: block;
   color: var(--clr-red);
   padding:1rem 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: var(--spacing);
   font-size: 1rem;
   transition: var(--transition);
@@ -255,7 +255,39 @@ NAVBAR
   background: rgba(0,0,0,0.9);
 }
 
-
+@media screen and (min-width:992px){
+	.nav-btn{
+		display: none;
+	}
+	.nav-links{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 0.8rem;
+    background: transparent;
+	}
+	.nav-header{
+    background: transparent;
+    border: none;
+    flex: 0 0 auto;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .nav-link{
+    padding: 0.2rem 0.8rem;
+    font-size: 1.3rem;
+  }
+  .nav-link:hover{
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    padding-left:0.8rem;
+    transform: translateY(-0.2rem);
+    color: var(--clr-yellow);
+  }
+}
 
 
 /*
