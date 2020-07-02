@@ -37,6 +37,7 @@ Variables
 /* font families */
 --ff-primary:'Roboto', sans-serif;
 --ff-secondary:'Caveat', cursive;
+--ff-tertiary:'Libre Baskerville', serif;
 /* transitions */
 --transition: all 0.3s linear;
 --long-transition: all 1.5s ease;
@@ -213,7 +214,26 @@ HERO
 .header{
   background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url('../images/header-bcg.jpeg') center/cover no-repeat fixed;
   min-height: 100vh;
+  position: relative;
 }
+.hero-banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.hero-subtitle{
+  font-family: var(--ff-secondary);
+  color: var(--clr-red);
+}
+.hero-title{
+  text-transform: uppercase;
+  color: var(--clr-red);
+  font-family: var(--ff-tertiary);
+  font-size: 4rem;
+}
+
 
 /*
 =========================
