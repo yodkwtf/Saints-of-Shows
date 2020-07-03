@@ -706,7 +706,7 @@ REVIEWS
 
 .reviews{
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/reviews-bcg.jpg') center/cover no-repeat fixed;
-	min-height: 70vh;
+	min-height: 50vh;
 }
 .reviews-title .title-info{
   border-color: var(--clr-white);
@@ -719,8 +719,7 @@ REVIEWS
 }
 .review{
   text-align: center;
-  margin: 2rem 0;
-	padding: 0 2rem;
+  margin: 2rem;
 	height: 100%;
 }
 .review-image{
@@ -757,17 +756,20 @@ FOOTER
 =========================
 */
 .footer{
-	background: rgb(20, 20, 20);
+	background: rgb(15, 15, 15);
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 2rem 4rem;
 	place-items: center;
-	padding: 2rem 4rem;
+	padding: 2rem 0;
 }
 @media screen and (min-width:776px){
 	.footer{
 		grid-template-columns: 40% 1fr;
 	}
+}
+.footer article{
+	padding: 0 2rem;
 }
 .footer-info{
 	align-self: center;
@@ -792,4 +794,6 @@ FOOTER
 
 .map{
 	border-radius: var(--radius);
+	max-width: 25rem;
+	object-fit: cover;
 }
