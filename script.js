@@ -35,25 +35,21 @@ $(document).ready(function () {
 
 
   // smooth scroll
-  $('.nav-link,.hero-btn').click(function (link) {
+  $('.nav-link,.hero-btn,.about-btn').click(function (link) {
     link.preventDefault();
 
     let target = $(this).attr('href');
     $('html, body').stop().animate({
-      scrollTop: $(target).offset().top - 82
+      scrollTop: $(target).offset().top - 80
     }, 1000);
 
   })
 
 
   // accordion
-  // $(".about-text").accordion({
-  //   collapsible: true
-  // });
-
-
   $(".service-info").accordion({
-    collapsible: true
+    collapsible: true,
+    active:false
   });
 
 
