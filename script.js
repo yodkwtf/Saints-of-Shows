@@ -9,17 +9,12 @@ $(document).ready(function () {
       // displaying links on click
       $('.nav-links').slideToggle(800);
 
-      // changing nav button
-      $('.nav-btn').toggleClass('turn');
-
     })
+
     $('.nav-link').click(function () {
 
       // hiding links on click
-      $('.nav-links').slideToggle(0);
-
-      // changing nav button
-      $('.nav-btn').toggleClass('turn');
+      $('.nav-links').slideToggle(800);
 
     })
   }
@@ -52,7 +47,12 @@ $(document).ready(function () {
 
 
   // accordion
-  $(".about-text").accordion({
+  // $(".about-text").accordion({
+  //   collapsible: true
+  // });
+
+
+  $(".service-info").accordion({
     collapsible: true
   });
 

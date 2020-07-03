@@ -193,8 +193,8 @@ margin-right: auto;
 .section-title{
 display: flex;
 align-items: center;
-padding: 4rem 2rem 0;
-margin: 4rem 0;
+padding: 2rem
+/* margin: 4rem 0; */
 }
 .title-icon{
   color:var(--clr-red);
@@ -211,7 +211,7 @@ margin: 4rem 0;
 }
 .title-info p{
   color: var(--clr-grey-6);
-  line-height: 0.3;
+  line-height: 1;
 }
 
 
@@ -269,11 +269,11 @@ NAVBAR
 .nav-link:hover{
   padding-left: 2rem;
   border-left: 5px solid var(--clr-yellow);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(27, 27, 27, 0.8);
   color: var(--clr-yellow);
 }
 .navBackground{
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.9);
 }
 
 @media screen and (min-width:992px){
@@ -418,7 +418,7 @@ ABOUT
 */
 
 .about-title{
-  margin-top:-5rem;
+  margin-top:-6rem;
 }
 .about-image{
   height: 20rem;
@@ -471,6 +471,8 @@ TEAM
 */
 .team{
   background: var(--clr-grey-3);
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  padding-bottom: 18rem;
 }
 .member{
   background: var(--clr-white);
@@ -519,6 +521,9 @@ TEAM
 }
 
 @media screen and (min-width:576px){
+  .team{
+  padding-bottom: 10rem;
+}
   .team-center{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -531,9 +536,13 @@ TEAM
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+
+
+
 /*
 =========================
-PORTFOLIO
+SHOWS
 =========================
 */
 
@@ -547,25 +556,105 @@ STATS
 
 /*
 =========================
-TEAM
-=========================
-*/
-
-
-/*
-=========================
-REVIEWS
-=========================
-*/
-
-
-/*
-=========================
 CONTACT
 =========================
 */
+.contact{
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)), url('../images/contact-bcg.jpg') center/cover no-repeat fixed;
+  padding: 10rem 2rem;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-title{
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+.contact-center{
+  margin-top: 2rem;
+}
+form{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-item,.form-btn{
+  text-transform: capitalize;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--clr-white);
+  border-bottom: 3px solid var(--clr-white);
+  margin-right: 1.5rem;
+  outline: none;
+  margin-bottom:1rem;
+}
+.form-item::placeholder{
+  color: var(--clr-white);
+}
+.form-btn{
+  border: 3px solid var(--clr-white);
+  color: var(--clr-yellow);
+  text-transform: uppercase;
+  transition: var(--transition);
+  padding: 1rem 2rem;
+}
+.form-btn:hover{
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
 
 
+/*
+=========================
+WALLPAPERS
+=========================
+*/
+
+
+/*
+=========================
+PLANS
+=========================
+*/
+.ui-accordion-header{
+  text-align: center;
+  padding: 1rem 0!important;
+  font-size: 1.5rem!important;
+  margin: 1rem 0!important;
+  border-radius: var(--radius)!important;
+  background: var(--clr-black)!important;
+  color: var(--clr-yellow)!important;
+  outline: none!important;
+}
+.ui-accordion .ui-accordion-content{
+  border: 2px solid var(--clr-yellow)!important;
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem!important;
+  text-align: left;
+}
+
+.plans{
+  background: var(--clr-grey-3);
+}
+.service-name{
+  color: var(--clr-white);
+  font-family: var(--ff-tertiary);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.plan-item{
+  font-size: 1.2rem;
+  color: var(--clr-black);
+}
+.plan-item i{
+  margin-right: 1rem;
+  color:var(--clr-red);
+  font-size: 1.3rem;
+}
 /*
 =========================
 FOOTER
