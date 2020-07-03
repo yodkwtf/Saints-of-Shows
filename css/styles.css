@@ -705,7 +705,7 @@ REVIEWS
 
 .reviews{
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/reviews-bcg.jpg') center/cover no-repeat fixed;
-  min-height: 70vh;
+	min-height: 70vh;
 }
 .reviews-title .title-info{
   border-color: var(--clr-white);
@@ -719,7 +719,8 @@ REVIEWS
 .review{
   text-align: center;
   margin: 2rem 0;
-  padding: 0 2rem;
+	padding: 0 2rem;
+	height: 100%;
 }
 .review-image{
   width: 15rem!important;
@@ -731,7 +732,8 @@ REVIEWS
 }
 .review-text{
   color: var(--clr-white);
-  max-width: 30rem;
+	max-width: 30rem;
+	margin: 0 auto;
 }
 .review-text i{
   font-size: 1.3rem;
@@ -741,7 +743,8 @@ REVIEWS
 .review-name{
   color: var(--clr-yellow);
   text-transform: uppercase;
-  font-family: var(--ff-secondary);
+	font-family: var(--ff-secondary);
+	margin-top: 1rem;
 }
 
 
