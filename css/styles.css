@@ -204,7 +204,8 @@ padding: 2rem;
 }
 .title-info{
   padding-left: 1rem;
-  border-left: 3px solid var(--clr-grey-6);
+	border-left: 3px solid var(--clr-grey-6);
+	padding-top: 0.8rem;
 }
 .title-info h3{
   color: var(--clr-black);
