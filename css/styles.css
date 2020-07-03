@@ -547,7 +547,7 @@ CONTACT
 =========================
 */
 .contact{
-  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)), url('../images/contact-bcg.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/contact-bcg.jpg') center/cover no-repeat fixed;
   padding: 10rem 2rem;
   clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
   display: flex;
@@ -565,6 +565,7 @@ CONTACT
 form{
   display: flex;
   flex-wrap: wrap;
+  padding:0 2rem ;
 }
 .form-item,.form-btn{
   text-transform: capitalize;
@@ -615,6 +616,7 @@ PLANS
   background: var(--clr-black)!important;
   color: var(--clr-white)!important;
   outline: none!important;
+  font-family: var(--ff-tertiary);
 }
 .netflix .ui-accordion-header{
   background: var(--clr-red)!important;
@@ -690,6 +692,62 @@ margin: 4rem 0;
   background: var(--clr-black);
   border-radius: var(--radius);
 }
+
+
+
+
+/*
+=========================
+REVIEWS
+=========================
+*/
+
+.reviews{
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/reviews-bcg.jpg') center/cover no-repeat fixed;
+  min-height: 70vh;
+}
+.reviews-title .title-info{
+  border-color: var(--clr-white);
+}
+.reviews-title .title-info h3{
+  color: var(--clr-red);
+}
+.reviews-title .title-info p{
+  color: var(--clr-white);
+}
+.review{
+  text-align: center;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+.review-image{
+  width: 15rem!important;
+  height: 10rem!important;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 2.5rem;
+}
+.review-text{
+  color: var(--clr-white);
+  max-width: 30rem;
+}
+.review-text i{
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color: var(--clr-yellow);
+}
+.review-name{
+  color: var(--clr-yellow);
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+}
+
+
+
+
+
+
 /*
 =========================
 FOOTER

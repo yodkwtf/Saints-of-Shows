@@ -53,6 +53,28 @@ $(document).ready(function () {
   });
 
 
+  // owl carousel for reviews
+  $('.reviews-center').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    slideBy: 2,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 5000,
+    smartSpeed: 5000,
+    autoHeight: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      900: {
+        items: 2
+      }
+    },
+  })
+
 })
 
 
