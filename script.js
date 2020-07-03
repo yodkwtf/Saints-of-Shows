@@ -58,13 +58,13 @@ $(document).ready(function () {
     loop: true,
     margin: 10,
     nav: false,
-    slideBy: 2,
+    slideBy: 1,
     dots: false,
     autoplay: true,
-    autoplayTimeout: 5000,
-    autoplaySpeed: 5000,
-    smartSpeed: 5000,
-    autoHeight: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    smartSpeed: 3000,
+    // autoHeight: true,
     responsive: {
       0: {
         items: 1
