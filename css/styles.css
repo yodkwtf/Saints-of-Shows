@@ -195,7 +195,6 @@ margin-right: auto;
 display: flex;
 align-items: center;
 padding: 0rem 2rem; 
-/* margin: 4rem 0; */
 }
 .title-icon{
   color:var(--clr-red);
@@ -215,8 +214,6 @@ padding: 0rem 2rem;
   color: var(--clr-grey-6);
   line-height: 1;
 }
-
-
 
 
 
@@ -534,6 +531,114 @@ TEAM
 SHOWS
 =========================
 */
+.shows-title{
+  flex-direction: row-reverse;
+  margin-top: -5rem;
+}
+.shows-title .title-icon{
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.shows-title .title-info{
+  padding-left: 0;
+	border-left: none;
+  padding-right: 1rem;
+	border-right: 3px solid var(--clr-grey-6);
+}
+
+.button-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.button-group button{
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  margin: 0.5rem 0.8rem;
+  text-transform: capitalize;
+  background: var(--clr-black);
+  color: var(--clr-red);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+.button-group button:hover{
+  color: var(--clr-white);
+}
+
+.show-img{
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  position: relative;
+  background: var(--clr-black);
+  border-radius: var(--radius);
+}
+.show-image{
+  border: 2px solid var(--clr-red);
+  height: 13rem;
+  /* max-width: 20rem;  */
+  border-radius: var(--radius);
+  object-fit: cover;
+  transition: var(--long-transition);
+}
+.show-info{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: var(--long-transition);
+  opacity: 0;
+  text-align: center;
+}
+.show-info h4{
+  color: var(--clr-red);
+  text-transform: uppercase;
+  font-family: var(--ff-tertiary);
+}
+.show-info p{
+  color: var(--clr-white);
+  text-transform: capitalize;
+}
+
+.show-img:hover .show-image{
+  opacity: 0.3;
+}
+.show-img:hover .show-info{
+  opacity: 1;
+}
+
+
+@media screen and (min-width:992px){
+  .show-img{
+    width: calc(25% - 2rem);
+  }
+}
+
+/* ############# isotope replaced with carousel ############# */
+
+.show-carousel{
+  display: none!important;
+} 
+
+/* 
+@media screen and (max-width:440px){
+  .show-carousel{
+    display: inline-block!important;
+  }
+  .shows-images-container{
+    display: none;
+  }
+  .shows-filter-buttons-container{
+    display: none;
+  }
+} */
+
+
+
+
+
+
 
 
 /*
@@ -541,6 +646,8 @@ SHOWS
 STATS
 =========================
 */
+
+
 
 
 /*
@@ -568,6 +675,7 @@ CONTACT
 form{
   display: flex;
   flex-wrap: wrap;
+  padding-left: 2rem;
 }
 .form-item,.form-btn{
   text-transform: capitalize;
@@ -597,11 +705,15 @@ form{
 }
 
 
+
+
 /*
 =========================
 WALLPAPERS
 =========================
 */
+
+
 
 
 /*
@@ -694,6 +806,9 @@ margin: 4rem 0;
   background: var(--clr-black);
   border-radius: var(--radius);
 }
+.netflix .plans-link a:hover{
+  background: var(--clr-red);
+}
 
 
 
@@ -759,18 +874,16 @@ FOOTER
 	background: rgb(15, 15, 15);
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 2rem 4rem;
+	gap: 2rem 2rem;
 	place-items: center;
-	padding: 2rem 0;
+	padding: 2rem ;
 }
 @media screen and (min-width:776px){
 	.footer{
 		grid-template-columns: 40% 1fr;
 	}
 }
-.footer article{
-	padding: 0 2rem;
-}
+
 .footer-info{
 	align-self: center;
 	text-align: center;
