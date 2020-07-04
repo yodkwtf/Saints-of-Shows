@@ -102,13 +102,13 @@ line-height: 1.25;
 margin-bottom: 0.75rem;
 }
 h1 {
-font-size: 3rem;
+font-size: 2.8rem;
 }
 h2 {
-font-size: 2rem;
+font-size: 1.9rem;
 }
 h3 {
-font-size: 1.3rem;
+font-size: 1.2rem;
 }
 h4 {
 font-size: 1rem;
@@ -212,10 +212,18 @@ padding: 0rem 2rem;
 }
 .title-info p{
   color: var(--clr-grey-6);
-  line-height: 1;
+  line-height: 1.5;
 }
 
-
+@media screen and (max-width:420px){
+  .title-icon{
+    font-size: 2.5rem;
+    margin-right: 0.8rem;
+  }
+  .title-info{
+    padding-left: 0.8rem;
+  }
+}
 
 
 /*
@@ -251,6 +259,11 @@ NAVBAR
 	border: 2px solid var(--clr-red);
   border-radius: 50%;
   background: transparent;
+}
+@media screen and (max-width:420px){
+  .nav-btn{
+    padding-top: 0.5rem;
+  }
 }
 .nav-links{
   display: none;
@@ -487,7 +500,7 @@ TEAM
 .member-course{
   text-transform: uppercase;
   color: var(--clr-grey-7);
-  line-height: 0.5;
+  line-height: 1;
 }
 .member-social{
   display: flex;
@@ -531,6 +544,15 @@ TEAM
 SHOWS
 =========================
 */
+@media screen and (max-width:420px){
+  .shows-title .title-icon{
+    font-size: 2.5rem;
+    margin-left: 0.8rem;
+  }
+  .shows-title .title-info{
+    padding-right: 0.8rem;
+  }
+}
 .shows-title{
   flex-direction: row-reverse;
   margin-top: -5rem;
@@ -650,6 +672,15 @@ SHOWS
 STATS
 =========================
 */
+@media screen and (max-width:420px){
+  .stats-title .title-icon{
+    font-size: 2.5rem;
+    margin-left: 0.8rem;
+  }
+  .stats-title .title-info{
+    padding-right: 0.8rem;
+  }
+}
 .stats{
   background: var(--clr-grey-3);
   padding: 5rem 0;
