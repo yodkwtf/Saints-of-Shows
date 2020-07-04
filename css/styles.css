@@ -67,15 +67,15 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/* @media screen and (max-width:380px){
+@media screen and (max-width:400px){
 *{
 overflow-x: hidden;
 }
-} */
+}
 
 body {
 font-family: var(--ff-primary);
-background: var(--clr-grey-10);
+background: var(--clr-grey-9);
 color: var(--clr-grey-5);
 line-height: 1.5;
 font-size: 0.9rem;
@@ -198,7 +198,7 @@ padding: 0rem 2rem;
 }
 .title-icon{
   color:var(--clr-red);
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-right: 1rem;
 }
 .title-info{
@@ -534,6 +534,7 @@ SHOWS
 .shows-title{
   flex-direction: row-reverse;
   margin-top: -5rem;
+  text-align: right;
 }
 .shows-title .title-icon{
   margin-right: 0;
@@ -562,6 +563,7 @@ SHOWS
   border-radius: 5px;
   font-size: 1.2rem;
   transition: var(--transition);
+  text-align: center;
 }
 .button-group button:hover{
   color: var(--clr-white);
@@ -577,7 +579,6 @@ SHOWS
 .show-image{
   border: 2px solid var(--clr-red);
   height: 13rem;
-  /* max-width: 20rem;  */
   border-radius: var(--radius);
   object-fit: cover;
   transition: var(--long-transition);
@@ -608,10 +609,17 @@ SHOWS
   opacity: 1;
 }
 
+.shows-images-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 @media screen and (min-width:992px){
   .show-img{
     width: calc(25% - 2rem);
+  }
+  .shows-images-container{
+    grid-template-columns: repeat(4,1fr);
   }
 }
 
@@ -637,18 +645,70 @@ SHOWS
 
 
 
-
-
-
-
 /*
 =========================
 STATS
 =========================
 */
+.stats{
+  background: var(--clr-grey-3);
+  padding: 5rem 0;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+}
 
+.stats-title{
+  text-align: right;
+  flex-direction: row-reverse;
+  margin-bottom: 3rem;
+}
+.stats-title .title-icon{
+  margin-right: 0;
+  margin-left: 1rem;
+}
+.stats-title .title-info{
+  padding-left: 0;
+	border-left: none;
+  padding-right: 1rem;
+	border-right: 3px solid var(--clr-grey-6);
+}
+.stat{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.stat-icon{
+    color: var(--clr-red);
+    font-size: 3rem;
+}
+.stat-number{
+    font-size: 2rem;
+    color: var(--clr-black);
+    font-weight: bold;
+    transition: var(--transition);
+    font-family: var(--ff-secondary);
+}
+.stat:hover .stat-number{
+    transform: scale(1.2);
+}
+.stat-title{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: var(--clr-platinum);
+    text-transform: uppercase;
+}
 
-
+.stats-center{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.stat{
+  justify-self: center;
+}
+@media screen and (min-width:992px){
+  .stats-center{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}
 
 /*
 =========================
@@ -658,7 +718,7 @@ CONTACT
 .contact{
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/contact-bcg.jpg') center/cover no-repeat fixed;
   padding: 10rem 2rem;
-  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -675,7 +735,7 @@ CONTACT
 form{
   display: flex;
   flex-wrap: wrap;
-  padding-left: 2rem;
+  padding:0 2rem;
 }
 .form-item,.form-btn{
   text-transform: capitalize;
@@ -685,7 +745,7 @@ form{
   background: transparent;
   color: var(--clr-white);
   border-bottom: 3px solid var(--clr-white);
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
   outline: none;
   margin-bottom:1rem;
 }
@@ -712,7 +772,55 @@ form{
 WALLPAPERS
 =========================
 */
+.wallpapers{
+  padding-bottom: 0;
+}
+.wallpapers-title{
+  margin-top: -5rem;
+}
+.wallpapers-center{
+  margin-top: 5rem;
+}
+.wallpaper{
+  position: relative;
+  background: var(--clr-black)
+}
+.wallpaper-image{
+  transition: var(--long-transition);
+  cursor: pointer;
+  object-fit: cover;
+  height: 100%;
+}
+.wallpaper-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--clr-red);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: var(--long-transition);
+  cursor: pointer;
+}
+.wallpaper:hover .wallpaper-image{
+  opacity: 0.4;
+}
+.wallpaper:hover .wallpaper-icon{
+  opacity: 1;
+}
 
+.wallpapers-center{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width:992px){
+.wallpapers-center{
+  grid-template-columns: repeat(4,1fr);
+}
+.wallpaper-icon{
+  font-size: 2.5rem;
+}
+}
 
 
 

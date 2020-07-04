@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     let target = $(this).attr('href');
     $('html, body').stop().animate({
-      scrollTop: $(target).offset().top - 80
+      scrollTop: $(target).offset().top - 79
     }, 1000);
 
   })
@@ -64,6 +64,20 @@ $(document).ready(function () {
   // layout Isotope after each image loads
   $grid.imagesLoaded().progress(function () {
     $grid.isotope('layout');
+  });
+
+
+
+  // magnific pop up
+  $('.wallpapers-center').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    // other options
+    gallery: {
+      // options for gallery
+      enabled: true,
+      enableEscapeKey:true
+    }
   });
 
 
