@@ -390,7 +390,8 @@ ICONS
   display: grid;
   place-items: center;
   text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
 .icons-title{
   margin-bottom: 2.5rem;
@@ -431,7 +432,8 @@ ABOUT
 }
 .about-image{
   height: 20rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: var(--radius);
   transition: var(--long-transition);
 }
@@ -470,7 +472,8 @@ TEAM
 */
 .team{
   background: var(--clr-grey-3);
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   padding-bottom: 18rem;
 }
 .member{
@@ -486,7 +489,8 @@ TEAM
 }
 .member-image{
   height: 15rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
 }
@@ -526,7 +530,8 @@ TEAM
   .team-center{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 @media screen and (min-width:992px){
@@ -602,7 +607,8 @@ SHOWS
   border: 2px solid var(--clr-red);
   height: 13rem;
   border-radius: var(--radius);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: var(--long-transition);
 }
 .show-info{
@@ -684,7 +690,8 @@ STATS
 .stats{
   background: var(--clr-grey-3);
   padding: 5rem 0;
-  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
 }
 
 .stats-title{
@@ -749,7 +756,8 @@ CONTACT
 .contact{
   background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/contact-bcg.jpg') center/cover no-repeat fixed;
   padding: 10rem 2rem;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -779,6 +787,18 @@ form{
   /* margin-right: 1.5rem; */
   outline: none;
   margin-bottom:1rem;
+}
+.form-item::-webkit-input-placeholder{
+  color: var(--clr-white);
+}
+.form-item::-moz-placeholder{
+  color: var(--clr-white);
+}
+.form-item:-ms-input-placeholder{
+  color: var(--clr-white);
+}
+.form-item::-ms-input-placeholder{
+  color: var(--clr-white);
 }
 .form-item::placeholder{
   color: var(--clr-white);
@@ -819,7 +839,8 @@ WALLPAPERS
 .wallpaper-image{
   transition: var(--long-transition);
   cursor: pointer;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .wallpaper-icon{
@@ -905,7 +926,8 @@ PLANS
 .service-name{
   height: 8rem;
   border-radius: var(--radius);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 2.5rem;
 }
 .plan-info{
@@ -979,7 +1001,8 @@ REVIEWS
 .review-image{
   width: 15rem!important;
   height: 10rem!important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0 auto;
   border-radius: 50%;
   margin-bottom: 2.5rem;
@@ -1047,5 +1070,6 @@ FOOTER
 .map{
 	border-radius: var(--radius);
 	max-width: 25rem;
-	object-fit: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }

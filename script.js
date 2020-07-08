@@ -1,24 +1,23 @@
 $(document).ready(function () {
 
 
-
-  var mq = window.matchMedia("(max-width: 992px)");
-  if (mq.matches) {
-
-    $('.nav-btn').click(function () {
-
-      // displaying links on click
-      $('.nav-links').slideToggle(800);
-
-    })
-
-    $('.nav-link').click(function () {
-
+  $('.nav-btn').click(function () {
+    
+    // displaying links on click
+    $('.nav-links').slideToggle(1000);
+    
+  })
+  
+  $('.nav-link').click(function () {
+    
+    var mq = window.matchMedia("(max-width: 992px)");
+    if (mq.matches) {
       // hiding links on click
-      $('.nav-links').slideToggle(800);
-
+      $('.nav-links').slideToggle(1000);
+    }
+    
     })
-  }
+  
 
 
 
@@ -136,6 +135,8 @@ $(document).ready(function () {
       }
     },
   })
+
+  
 })
 
 
