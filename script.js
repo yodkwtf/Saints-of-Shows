@@ -15,7 +15,7 @@ $(document).ready(function () {
       // hiding links on click
       $('.nav-links').slideToggle(1000);
     }
-    
+
     })
   
 
